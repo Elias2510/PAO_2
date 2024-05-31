@@ -4,22 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="752ce360-4618-4cd9-90fd-109497078ca0" name="Changes" comment="test">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/DatabaseConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/InterfataUtilizator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Masina.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/MasinaElectrica.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/MasinaService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Mecanic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/MecanicService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/PiesaAuto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Programare.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ProgramareService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ServiciuAuto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="752ce360-4618-4cd9-90fd-109497078ca0" name="Changes" comment="fix">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/DatabaseConnection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Masina.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Masina.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/MasinaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/MasinaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Mecanic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Mecanic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/MecanicService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/MecanicService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Programare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Programare.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ProgramareService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ProgramareService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +45,6 @@
     "Application.Main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
@@ -81,7 +75,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1717088867473</updated>
-      <workItem from="1717088868495" duration="2064000" />
+      <workItem from="1717088868495" duration="4143000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
@@ -91,7 +85,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717088909500</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fix">
+      <option name="closed" value="true" />
+      <created>1717091152821</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1717091152821</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -99,6 +101,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix" />
   </component>
 </project>

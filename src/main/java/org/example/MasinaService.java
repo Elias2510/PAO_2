@@ -7,6 +7,10 @@ import java.util.List;
 public class MasinaService {
     private Connection connection;
 
+    public MasinaService(Connection connection) {
+        this.connection = connection;
+    }
+
 
 
     public void adaugaMasina(Masina masina) throws SQLException {

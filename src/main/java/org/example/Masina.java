@@ -4,6 +4,7 @@ import java.util.Date;
 
 public class Masina {
 
+
     private int id;
     private String marca;
     private String model;

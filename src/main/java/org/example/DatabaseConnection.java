@@ -1,7 +1,6 @@
 package org.example;
 
 import java.sql.Connection;
-
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
@@ -20,7 +19,7 @@ public class DatabaseConnection {
                 // Încarcarea driver-ului PostgreSQL
                 Class.forName("org.postgresql.Driver");
                 // Crearea conexiunii
-                connection = DriverManager.getConnection("jdbc:postgresql://localhost:5431/eliasmilosi", "eliasmilosi"," elias");
+                connection = DriverManager.getConnection(URL, USER, PASSWORD);
             } catch (ClassNotFoundException | SQLException e) {
                 e.printStackTrace();
             }

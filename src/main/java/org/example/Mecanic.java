@@ -11,7 +11,6 @@ public class Mecanic {
         this.specializare = specializare;
     }
 
-
     public int getId() {
         return id;
     }
@@ -34,14 +33,5 @@ public class Mecanic {
 
     public void setSpecializare(String specializare) {
         this.specializare = specializare;
-    }
-
-    @Override
-    public String toString() {
-        return "Mecanic{" +
-                "id=" + id +
-                ", nume='" + nume + '\'' +
-                ", specializare='" + specializare + '\'' +
-                '}';
     }
 }

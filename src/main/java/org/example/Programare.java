@@ -1,6 +1,6 @@
 package org.example;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class Programare {
     private int id;
@@ -15,7 +15,6 @@ public class Programare {
         this.numeMecanic = numeMecanic;
     }
 
-    // Getteri și Setteri
     public int getId() {
         return id;
     }
@@ -46,15 +45,5 @@ public class Programare {
 
     public void setNumeMecanic(String numeMecanic) {
         this.numeMecanic = numeMecanic;
-    }
-
-    @Override
-    public String toString() {
-        return "Programare{" +
-                "id=" + id +
-                ", idMasina=" + idMasina +
-                ", data=" + data +
-                ", numeMecanic='" + numeMecanic + '\'' +
-                '}';
     }
 }
