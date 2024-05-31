@@ -4,21 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="752ce360-4618-4cd9-90fd-109497078ca0" name="Changes" comment="test">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/DatabaseConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/InterfataUtilizator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Masina.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/MasinaElectrica.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/MasinaService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Mecanic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/MecanicService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/PiesaAuto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Programare.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ProgramareService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ServiciuAuto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="752ce360-4618-4cd9-90fd-109497078ca0" name="Changes" comment="setare Postgres">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/AuditService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Locatie.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/LocatieService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Manager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ManagerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/audit.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,9 +31,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2hCCqe1bWHkOeCALjCWaUraclME" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -81,7 +76,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1717088867473</updated>
-      <workItem from="1717088868495" duration="2064000" />
+      <workItem from="1717088868495" duration="5013000" />
+      <workItem from="1717512577159" duration="304000" />
+      <workItem from="1717513515670" duration="2787000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
@@ -91,7 +88,23 @@
       <option name="project" value="LOCAL" />
       <updated>1717088909500</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fix">
+      <option name="closed" value="true" />
+      <created>1717091152821</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1717091152821</updated>
+    </task>
+    <task id="LOCAL-00003" summary="setare Postgres">
+      <option name="closed" value="true" />
+      <created>1717141778187</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1717141778187</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -99,6 +112,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="fix" />
+    <MESSAGE value="setare Postgres" />
+    <option name="LAST_COMMIT_MESSAGE" value="setare Postgres" />
   </component>
 </project>

@@ -1,85 +1,58 @@
 package org.example;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.sql.*;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class ProgramareService {
-    public void programareMasina(ServiciuAuto serviciu, Scanner scanner) {
-        System.out.println("Introduceți detalii despre programare:");
-        System.out.print("Introduceți ID-ul programării: ");
-        int idProgramare = scanner.nextInt();
-        scanner.nextLine(); // Consumă newline
-        System.out.print("Introduceți ID-ul mașinii: ");
-        int idMasina = scanner.nextInt();
-        scanner.nextLine(); // Consumă newline
-        System.out.print("Introduceți data programării (YYYY-MM-DD): ");
-        String dataProgramareString = scanner.nextLine();
-        System.out.print("Introduceți numele mecanicului: ");
-        String numeMecanic = scanner.nextLine();
+    private Connection connection;
 
-        Date dataProgramare = null;
-        try {
-            dataProgramare = new SimpleDateFormat("yyyy-MM-dd").parse(dataProgramareString);
-        } catch (ParseException e) {
-            System.out.println("Formatul datei este invalid. Reîncercați.");
-            return;
-        }
-
-        Programare programare = new Programare(idProgramare, idMasina, dataProgramare, numeMecanic);
-        serviciu.programareMasina(programare);
-        System.out.println("Programare realizată cu succes.");
+    public ProgramareService(Connection connection) {
+        this.connection = connection;
     }
 
-    public void afiseazaProgramari(ServiciuAuto serviciu) {
-        List<Programare> programari = serviciu.getListaProgramari();
-        if (programari.isEmpty()) {
-            System.out.println("Nu există programări în baza de date.");
-        } else {
-            System.out.println("Programările existente:");
-            for (Programare programare : programari) {
-                System.out.println(programare);
+    public void adaugaProgramare(Programare programare) throws SQLException {
+        String query = "INSERT INTO programare (id_masina, data, nume_mecanic) VALUES (?, ?, ?)";
+        try (PreparedStatement statement = connection.prepareStatement(query)) {
+            statement.setInt(1, programare.getIdMasina());
+            statement.setDate(2, programare.getData());
+            statement.setString(3, programare.getNumeMecanic());
+            statement.executeUpdate();
+        }
+    }
+
+    public List<Programare> afiseazaProgramari() throws SQLException {
+        List<Programare> programari = new ArrayList<>();
+        String query = "SELECT * FROM programare";
+        try (Statement statement = connection.createStatement();
+             ResultSet resultSet = statement.executeQuery(query)) {
+            while (resultSet.next()) {
+                int id = resultSet.getInt("id");
+                int idMasina = resultSet.getInt("id_masina");
+                Date data = resultSet.getDate("data");
+                String numeMecanic = resultSet.getString("nume_mecanic");
+                programari.add(new Programare(id, idMasina, data, numeMecanic));
             }
         }
+        return programari;
     }
 
-    public void stergeProgramare(ServiciuAuto serviciu, Scanner scanner) {
-        afiseazaProgramari(serviciu);
-        System.out.print("Introduceți ID-ul programării pentru ștergere: ");
-        int idProgramare = scanner.nextInt();
-        scanner.nextLine();
-
-        if (serviciu.stergeProgramare(idProgramare)) {
-            System.out.println("Programarea a fost ștearsă cu succes.");
-        } else {
-            System.out.println("Programarea nu a fost găsită.");
+    public void actualizeazaProgramare(Programare programare) throws SQLException {
+        String query = "UPDATE programare SET id_masina = ?, data = ?, nume_mecanic = ? WHERE id = ?";
+        try (PreparedStatement statement = connection.prepareStatement(query)) {
+            statement.setInt(1, programare.getIdMasina());
+            statement.setDate(2, programare.getData());
+            statement.setString(3, programare.getNumeMecanic());
+            statement.setInt(4, programare.getId());
+            statement.executeUpdate();
         }
     }
 
-    public void actualizeazaDetaliiProgramare(ServiciuAuto serviciu, Scanner scanner) {
-        afiseazaProgramari(serviciu);
-        System.out.print("Introduceți ID-ul programării pentru actualizare: ");
-        int idProgramare = scanner.nextInt();
-        scanner.nextLine(); // Consumă newline
-
-        Programare programare = serviciu.cautaProgramare(idProgramare);
-        if (programare == null) {
-            System.out.println("Programarea nu a fost găsită.");
-        } else {
-            System.out.print("Introduceți noua dată (YYYY-MM-DD): ");
-            String newDataString = scanner.nextLine();
-            Date newData = null;
-            try {
-                newData = new SimpleDateFormat("yyyy-MM-dd").parse(newDataString);
-            } catch (ParseException e) {
-                System.out.println("Formatul datei este invalid. Reîncercați.");
-                return;
-            }
-            programare.setData(newData);
-
-            System.out.println("Detaliile programării au fost actualizate cu succes.");
+    public void stergeProgramare(int idProgramare) throws SQLException {
+        String query = "DELETE FROM programare WHERE id = ?";
+        try (PreparedStatement statement = connection.prepareStatement(query)) {
+            statement.setInt(1, idProgramare);
+            statement.executeUpdate();
         }
     }
 }
